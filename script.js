@@ -26,3 +26,15 @@ function updateGridContainerTemplateColumns(columns) {
     gridContainer.style.gridTemplateColumns = numberOfColumns;
 }
 
+function updateGrid(number) {
+    clearGrid();
+    updateGridContainerTemplateColumns(number);
+    let numberofDivs = number**2;
+    //console.log(numberofDivs);
+    createMultipleGridDivs(numberofDivs);
+}
+
+function clearGrid() {
+    const gridNode = document.getElementById('grid');
+    gridNode.innerHTML ='';
+}
