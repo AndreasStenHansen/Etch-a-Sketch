@@ -1,3 +1,13 @@
+// Main functions
+function updateGrid(number) {
+    clearGrid();
+    updateGridContainerTemplateColumns(number);
+    let numberofDivs = number**2;
+    //console.log(numberofDivs);
+    createMultipleGridDivs(numberofDivs);
+}
+
+//Single functions
 function createSingleGridDiv(){
     const container = document.querySelector('#grid');
     //console.log(container)
@@ -24,14 +34,6 @@ function updateGridContainerTemplateColumns(columns) {
     }
     //console.log(numberOfColumns);
     gridContainer.style.gridTemplateColumns = numberOfColumns;
-}
-
-function updateGrid(number) {
-    clearGrid();
-    updateGridContainerTemplateColumns(number);
-    let numberofDivs = number**2;
-    //console.log(numberofDivs);
-    createMultipleGridDivs(numberofDivs);
 }
 
 function clearGrid() {
